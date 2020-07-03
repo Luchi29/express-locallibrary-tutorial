@@ -15,7 +15,6 @@ var app = express();
 var mongoose = require('mongoose');
 var mongoDB = 'mongodb+srv://Luchita29:performance29@cluster0-6tayg.azure.mongodb.net/<dbname>?retryWrites=true&w=majority';
 mongoose.connect(mongoDB, { useNewUrlParser: true  });
-mongoose.Promise = global.Promise;
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 

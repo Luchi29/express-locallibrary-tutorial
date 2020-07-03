@@ -13,8 +13,7 @@ var helmet = require('helmet');
 var app = express();
 
 var mongoose = require('mongoose');
-var dev_db_url = 'mongodb+srv://Luchita29:performance29@cluster0-6tayg.azure.mongodb.net/<dbname>?retryWrites=true&w=majority';
-var mongoDB = process.env.MONGODB_URI || dev_db_url;
+var mongoDB = 'mongodb+srv://Luchita29:performance29@cluster0-6tayg.azure.mongodb.net/<dbname>?retryWrites=true&w=majority';
 mongoose.connect(mongoDB, { useNewUrlParser: true  });
 mongoose.Promise = global.Promise;
 var db = mongoose.connection;
